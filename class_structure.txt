@@ -1,0 +1,17 @@
+Classes & Functions
+Readfile (function only)
+	Readfile (currently xls later this will include json and xml)
+Account
+	Name
+	Total Amount owed / is owed
+Transasctions
+	Amount
+	Narrative
+	(who to)
+Bank Manager
+	Who owes who
+	Add or minus
+Display (function only)
+	ToString
+	(printing info to screen)
+

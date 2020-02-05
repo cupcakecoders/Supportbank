@@ -6,7 +6,8 @@ namespace Supportbank
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var readfile = Readfile.ReadDataFile();
+            Console.WriteLine(readfile);
         }
     }
 }
