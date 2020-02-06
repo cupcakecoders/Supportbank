@@ -12,15 +12,25 @@ namespace Supportbank
             //Transaction myTransaction = new Transaction();
             FileReader fileReader = new FileReader();
             var transactionsList = fileReader.ReadDataFile();
-
-            var groupedUserList = transactionsList
-                .GroupBy(u => u.FromUser)
-                .Select(grp => grp.ToList());
             
-            foreach (var group in groupedUserList)
+            Console.WriteLine("Which user do you want to see transactions for?");
+            var user = Console.ReadLine();
+                
+            var groupedUserList = transactionsList
+                //.GroupBy(u => u.FromUser)
+                .Where(t => t.FromUser == user);
+                //.Select(grp => grp.ToList());
+                
+                var groupedCustomerList = transactionsList
+                    .GroupBy(u => u.ToUser);
+                //.Select(grp => grp.ToList());
+            
+            foreach (var t in groupedUserList)
             {
-                Console.WriteLine(group.Count());
+                    Console.WriteLine($"{t.FromUser} to {t.ToUser} for {t.TransactionDescription} on {t.TransactionDates}");
             }
+            
+            
             
 
             
