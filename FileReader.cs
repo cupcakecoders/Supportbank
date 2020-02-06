@@ -26,7 +26,6 @@ namespace Supportbank
                 Transaction eachTransaction = new Transaction(transactiondates, from, to, description, amount);
                 
                 transactionsList.Add(eachTransaction);
-                
             }
 
             return transactionsList;

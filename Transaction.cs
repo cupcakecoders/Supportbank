@@ -12,7 +12,7 @@ namespace Supportbank
         private string TransactionDescription { get; }
         private double TransactionAmount { get; }
         
-        // construction. i can make a constructor that does not have parameters that way the new instance will not ask for it.
+        // constructor. i can make a constructor that does not have parameters that way the new instance will not ask for it.
         public Transaction(DateTime transactionDates, string fromUser, string toUser, string transactionDescription, double transactionAmount)
         {
             this.TransactionDates = transactionDates;
