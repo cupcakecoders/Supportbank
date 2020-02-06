@@ -6,8 +6,11 @@ namespace Supportbank
     {
         static void Main(string[] args)
         {
-            var readfile = Readfile.ReadDataFile();
-            Console.WriteLine(readfile);
+            // Transaction myTransaction = new Transaction();
+            
+            FileReader fileReader = new FileReader();
+            var transactionsString = fileReader.ReadDataFile();
+
         }
     }
 }
