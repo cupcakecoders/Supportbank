@@ -24,10 +24,9 @@ namespace Supportbank
                 var amount = Double.Parse(words[4]);
                 
                 Transaction eachTransaction = new Transaction(transactiondates, from, to, description, amount);
-                
+                    
                 transactionsList.Add(eachTransaction);
             }
-
             return transactionsList;
         }
     }

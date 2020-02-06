@@ -6,6 +6,7 @@
     <e p="C:\Users\KanDil\Documents\training\Supportbank" t="IncludeRecursive">
       <e p=".gitignore" t="Include" />
       <e p="Account.cs" t="Include" />
+      <e p="BankManager.cs" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="class_structure.txt" t="Include" />
       <e p="FileReader.cs" t="Include" />
@@ -22,7 +23,6 @@
       <e p="Supportbank.csproj" t="IncludeRecursive" />
       <e p="Supportbank.sln" t="IncludeFlat" />
       <e p="Transaction.cs" t="Include" />
-      <e p="TransactionManager.cs" t="Include" />
       <e p="Transactions.csv" t="Include" />
     </e>
   </component>
