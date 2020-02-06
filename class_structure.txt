@@ -4,14 +4,25 @@ Readfile (function only)
 Account
 	Name
 	Total Amount owed / is owed
-Transasctions
+	Class fields: string account holder name(a), string colleague name(b), int float amount is owed (b to a), int float amount owes (a to b) 
+Transactions
 	Amount
 	Narrative
 	(who to)
-Bank Manager
+	Takes parameter string rawData
+	Go through each item in rawData to create a list item
+	List item: int amount, string narrative, string from, string to
+    returns list  
+Bank Manager  - number crunching              
 	Who owes who
 	Add or minus
+	Class fields: colleague from (a), colleague to (b), amount to credit or debit (should this class inherit from accounts or access name  fields in account class?)
+	Takes parameter transactions > list item
+	For each list item if person owed is not in new list create new list item, if for person owed person owing is not in list create new item.
+	For each list item where there is a record with the same a - b transaction sum amount owed/is owed. 
+	Returns list item of total amount owed / is owed for each colleague. 
 Display (function only)
-	ToString
+    amountOwed.ToString
+    amountIsOwed.ToString
 	(printing info to screen)
-
+    Class fields: (Same is account class? should this inherit from account class?)
