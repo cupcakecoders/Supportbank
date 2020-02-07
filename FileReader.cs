@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace Supportbank
 {
-    public class FileReader
+    public static class FileReader
     {
-        public List<Transaction> ReadDataFile()
+        public static List<Transaction> ReadDataFile()
         {
             List<Transaction> transactionsList = new List<Transaction>(); 
             

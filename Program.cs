@@ -10,39 +10,12 @@ namespace Supportbank
         static void Main(string[] args)
         {
             //Transaction myTransaction = new Transaction();
-            FileReader fileReader = new FileReader();
-            var transactionsList = fileReader.ReadDataFile();
-            
-            Console.WriteLine("Which user do you want to see transactions for?");
-            var user = Console.ReadLine();
-                
-            var groupedUserList = transactionsList
-                //.GroupBy(u => u.FromUser)
-                .Where(t => t.FromUser == user);
-                //.Select(grp => grp.ToList());
-                
-                var groupedCustomerList = transactionsList
-                    .GroupBy(u => u.ToUser);
-                //.Select(grp => grp.ToList());
-            
-            foreach (var t in groupedUserList)
-            {
-                    Console.WriteLine($"{t.FromUser} to {t.ToUser} for {t.TransactionDescription} on {t.TransactionDates}");
-            }
-            
-            
-            
-
-            
-            
-            
-            
-            
-            
-            //transactionsList = make an instance of an account for each person
-            // sum up amount each person owes other person
-            // print out names and figures
-
+            //FileReader fileReader = new FileReader();
+            //var transactionsList = fileReader.ReadDataFile();
+            var transactionsList = FileReader.ReadDataFile();
+            var bankManager = new BankManager(); //in bank manger we have a createuser method. this is a new instance of that class. so we can then access the method below.
+            var accounts = bankManager.CreateUser(transactionsList); //accesses create user method on new instance of bank manager class. passes in specific list of data in form of variable. class.
+            Console.WriteLine(accounts);
         }
     }
 }

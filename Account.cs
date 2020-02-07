@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
 
 namespace Supportbank
@@ -8,7 +9,8 @@ namespace Supportbank
     {   
         //this class should create an account for each unique person owed. initialise it with account name and empty strings and 0 in amount.
 
-        private string AccountName;
+        public string AccountName;
+        public List<Transaction> AccountTransactions;
 
         //constructor
         public Account(string accountName)
@@ -16,9 +18,8 @@ namespace Supportbank
             this.AccountName = accountName;
         }
         
-        
-        
-        
+
     }
+
 }
     
