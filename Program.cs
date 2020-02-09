@@ -16,7 +16,7 @@ namespace Supportbank
             Console.WriteLine("Which user's transactions would you like to see?");
             var user = Console.ReadLine();
             var accountQueried = userAccounts.Find(u => u.AccountName == user);
-            Console.WriteLine(accountQueried.UserTransactions);
+            Console.WriteLine(accountQueried.UserFromTransactions);
         }
     }
 }

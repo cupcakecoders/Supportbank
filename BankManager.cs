@@ -49,10 +49,11 @@ namespace Supportbank
                 {
                     if (transaction.FromUser.Equals(userAccountName))
                     {
-                        account.UserTransactions.Add(transaction);
+                        account.UserFromTransactions.Add(transaction);
                     }
                 }
             }
+            //add transaction ToUser
         }
     }
 }
