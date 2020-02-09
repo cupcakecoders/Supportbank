@@ -19,7 +19,6 @@ namespace Supportbank
                     userAccounts.Add(userAccount);
                 }
             }
-
             return userAccounts;
         }
 
@@ -35,26 +34,25 @@ namespace Supportbank
             return false;
         }
 
-        public List<Transaction> AddTransactionsToAccount(List<Account> userAccounts, List<Transaction> transactions)
+        public void AddTransactionsToAccount(List<Account> userAccounts, List<Transaction> transactions)
         {
+            //end up with a list for each user with transaction with their name in ToUser or FromUser.
             //nested loop which loops through each account, then loops through each transaction to find those where AccountName(string) == transaction.ToUser 
             //alternatively update account balance based on transactions + or - depending on if owed or owing
+
+            //var all = transactions.Where(t => userAccounts.Any(a => a.AccountName == t.ToUser));
+            
             foreach (var account in userAccounts)
             {
                 string userAccountName = account.AccountName;
-                
                 foreach (var transaction in transactions)
                 {
-                    Console.WriteLine(transaction);
-                        
-                    if (transaction.ToUser.Equals(userAccountName))
+                    if (transaction.FromUser.Equals(userAccountName))
                     {
-                        var from = transaction.FromUser;
-                        var amount = transaction.TransactionAmount;
+                        account.UserTransactions.Add(transaction);
                     }
                 }
             }
-            return null;
         }
     }
 }

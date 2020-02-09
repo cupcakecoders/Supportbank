@@ -9,6 +9,7 @@
       <e p="BankManager.cs" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="class_structure.txt" t="Include" />
+      <e p="Display.cs" t="Include" />
       <e p="FileReader.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">

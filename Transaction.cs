@@ -22,6 +22,5 @@ namespace Supportbank
             this.TransactionAmount = transactionAmount;
         }
 
-        
     }
 }
