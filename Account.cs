@@ -10,7 +10,6 @@ namespace Supportbank
     {   
         //this class creates an account for each person owed. initialise it with account name and empty strings and 0 in amount.
         public string AccountName;
-        public double AccountBalance;
         public List<Transaction> UserFromTransactions = new List<Transaction>();
         public List<Transaction> UserToTransactions = new List<Transaction>();
 
@@ -19,23 +18,34 @@ namespace Supportbank
         {
             this.AccountName = accountName;
         }
-
-        //overloading with another constructor
-        public Account(string accountName, double accountBalance)
-        {
-            this.AccountName = accountName;
-            this.AccountBalance = accountBalance;
-        }
+        
         // method to show fromuser and touser transactions
         public List<Transaction> CombinedFromToTransactions()
         {
             return UserFromTransactions.Concat(UserToTransactions) as List<Transaction>;
         }
         
-        // method to add up all the transactions where the touser is the same for account holder
-        
-
-        //method to add up all the transactions where the fromuser is the same for account holder
+        // method to add up all the transactions where the to user is the same for account holder
+        public double AmountUserOwes()
+        {
+            double accountBalanceOwes = 0;
+            
+            foreach (var transaction in UserFromTransactions)
+            {
+                accountBalanceOwes += transaction.TransactionAmount;
+            }
+            return accountBalanceOwes;
+        }
+        public double AmountUserOwed()
+        {
+            double accountBalanceOwed = 0;
+            
+            foreach (var transaction in UserToTransactions)
+            {
+                accountBalanceOwed += transaction.TransactionAmount;
+            }
+            return accountBalanceOwed;
+        }
     }
 }
     
