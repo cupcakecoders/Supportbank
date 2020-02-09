@@ -17,7 +17,7 @@ namespace Supportbank
             {
                 var words = line.Split(",");
 
-                var transactiondates = DateTime.Parse(words[0]);
+                string transactiondates = words[0];
                 var from = words[1];
                 var to = words[2];
                 var description = words[3];

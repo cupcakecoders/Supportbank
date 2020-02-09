@@ -13,10 +13,10 @@ namespace Supportbank
             var bankManager = new BankManager(); //in bank manger we have a createuser method. this is a new instance of that class. so we can then access the method below.
             var userAccounts = bankManager.CreateUser(transactionsList); //accesses create user method on new instance of bank manager class. passes in specific list of data in form of variable. class.
             bankManager.AddTransactionsToAccount(userAccounts, transactionsList);
-            Console.WriteLine("Which user's transactions would you like to see?");
+            /*Console.WriteLine("Which user's transactions would you like to see? Jon A, Stephen S, Laura B, Rob S, Sam N, Todd, Chris W, Dan W, Tim L, Ben B, Sarah T, Gergana I");
             var user = Console.ReadLine();
             var accountQueried = userAccounts.Find(u => u.AccountName == user);
-            Console.WriteLine(accountQueried.UserFromTransactions);
+            Console.WriteLine(accountQueried.UserFromTransactions);*/
         }
     }
 }
