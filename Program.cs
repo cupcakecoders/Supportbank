@@ -28,7 +28,7 @@ namespace Supportbank
                 }
             }
 
-            if (response == "List Jon A")
+            if (response == "List Jon A")//change response to be generic
             {
                 var accountName = "Jon A";
 
@@ -38,7 +38,7 @@ namespace Supportbank
                     {
                         foreach (var transaction in account.CombinedFromToTransactions())
                         {
-                            Console.WriteLine(transaction);
+                            Console.WriteLine($"FROM: {transaction.FromUser} TO: {transaction.ToUser} AMT: {transaction.TransactionAmount} DESC: {transaction.TransactionDescription}");
                         }
                     }
                 }

@@ -22,7 +22,7 @@ namespace Supportbank
         // method to show fromuser and touser transactions
         public List<Transaction> CombinedFromToTransactions()
         {
-            return UserFromTransactions.Concat(UserToTransactions) as List<Transaction>;
+            return UserFromTransactions.Concat(UserToTransactions).ToList();
         }
         
         // method to add up all the transactions where the to user is the same for account holder
