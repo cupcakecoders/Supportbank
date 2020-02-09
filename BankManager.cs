@@ -18,6 +18,11 @@ namespace Supportbank
                     Account userAccount = new Account(transaction.ToUser);// add a new account to the list.
                     userAccounts.Add(userAccount);
                 }
+                if (!DoesUserExist(userAccounts, transaction.FromUser))
+                {
+                    Account userAccount = new Account(transaction.FromUser);// add a new account to the list.
+                    userAccounts.Add(userAccount);
+                }
             }
             return userAccounts;
         }

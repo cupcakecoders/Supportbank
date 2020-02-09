@@ -18,7 +18,12 @@ namespace Supportbank
         {
             this.AccountName = accountName;
         }
-        
+
+        public Account()
+        {
+            
+        }
+
         // method to show fromuser and touser transactions
         public List<Transaction> CombinedFromToTransactions()
         {

@@ -18,6 +18,7 @@ namespace Supportbank
             var accountQueried = userAccounts.Find(u => u.AccountName == user);
             Console.WriteLine(accountQueried.UserFromTransactions);*/
             Console.WriteLine("Choose List All or List <Account>");
+
             var response = Console.ReadLine();
             if (response == "List All")
             {
